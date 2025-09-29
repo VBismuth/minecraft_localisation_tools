@@ -97,7 +97,7 @@ def main(argv: list[str]) -> None:
     if len(argv) < 1 or 'help' in argv:
         print("Script to make current "
               "tips (for tips minecraft mod) localizable")
-        print(f"    Usage: {app_name} path/to/target")
+        print(f"    Usage: {os.path.basename(app_name)} path/to/target")
         sys.exit(int('help' not in argv))
 
     targ = os.path.abspath(argv[0])

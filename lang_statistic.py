@@ -72,7 +72,7 @@ def form_stats_text(total: int, stats: dict) -> str:
 def help_msg(name: str):
     """ help message """
     print('Simple script for counting lang files (in kubejs assets)')
-    print('Usage:', name, 'path/to/assets', 'lang_code')
+    print('Usage:', os.path.basename(name), 'path/to/assets', 'lang_code')
     print('\nNote: saves stats into', OUTPUT)
 
 

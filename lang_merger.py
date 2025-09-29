@@ -41,7 +41,7 @@ def help_msg(app: str):
     """ help message """
     print("A script to merge 2 language files (like output_en_us.json) ",
           "by appending missing parts from source file to target file")
-    print(f"    Usage: {app} path/to/souce path/to/target")
+    print(f"    Usage: {os.path.basename(app)} path/to/souce path/to/target")
 
 
 def merge_data(source_data: dict, target_data: dict) -> dict:

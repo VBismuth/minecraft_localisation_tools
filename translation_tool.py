@@ -272,7 +272,7 @@ def dump_json(filepath: str, data: dict,
 def help_msg(app: str):
     """ help message """
     print("A script for translation of minecraft lang files (like en_us.json)")
-    print(f"\nUsage: {app} path/to/target [help|clean]")
+    print(f"\nUsage: {os.path.basename(app)} path/to/target [help|clean]")
     print("    Optional arguments:")
     print("        help  - show this message and exit")
     print("        clean - clean cache file and exit")

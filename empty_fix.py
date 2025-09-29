@@ -54,7 +54,7 @@ def fill_empty(lang_data: dict):
 def help_msg(app: str):
     """ help message """
     print("A script to fill empty translation keys by their name")
-    print(f"    Usage: {app} path/to/target")
+    print(f"    Usage: {os.path.basename(app)} path/to/target")
 
 
 def main(args: list[str]) -> None:
