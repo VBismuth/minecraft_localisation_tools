@@ -44,10 +44,8 @@ def fill_empty(lang_data: dict):
     for key in lang_data:
         if lang_data.get(key) is not None and lang_data.get(key) != '':
             continue
-        name: str = str(key)\
-            .split('.', maxsplit=1)[-1]\
-            .replace('_', ' ')\
-            .capitalize()
+        name: str = ' '.join(str(i).capitalize() for i in
+                             str(key).rsplit('.', maxsplit=1)[-1].split('_'))
         lang_data[key] = name
 
 
