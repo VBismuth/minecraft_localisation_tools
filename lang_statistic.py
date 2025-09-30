@@ -39,7 +39,12 @@ def statistic_counter(lang_files: dict) -> (int, dict):
     total: int = 0
     mod_stat: dict = {}
     for mod_name in lang_files:
-        stat: int = lang_lines_counter(lang_files.get(mod_name))
+        try:
+            stat: int = lang_lines_counter(lang_files.get(mod_name))
+        except json.decoder.JSONDecodeError as err:
+            print(f'Error: json error at "{mod_name}" -> {err}',
+                  file=sys.stderr)
+            continue
         if stat <= 0:
             continue
         total += stat
